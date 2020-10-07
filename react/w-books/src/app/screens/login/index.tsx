@@ -48,11 +48,11 @@ function Login() {
       <input name="password" className={stylesLogin.input} type="password" ref={register} />
       <label className={stylesLogin.label}>Confirmación de Password</label>
       <input name="passwordConfirmation" className={stylesLogin.input} type="password" ref={register} />
-      <button className={stylesLogin['signup-button']} type="button">
+      <button className={stylesLogin['signup-button']} type="submit">
         Sign Up
       </button>
       <hr />
-      <button className={stylesLogin['login-button']} type="submit">
+      <button className={stylesLogin['login-button']} type="button">
         Login
       </button>
     </form>
