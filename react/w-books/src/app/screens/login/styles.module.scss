@@ -33,7 +33,7 @@ $input-height: 30px;
   }
 }
 
-.loginContainer {
+.login-container {
   background-color: #F5F5F5;
   padding: 20px;
   width: 300px;
@@ -43,7 +43,7 @@ $input-height: 30px;
   flex-direction: column;
 }
 
-.mainLogo {
+.main-logo {
   width: 80%;
   align-self: center;
   margin: 10px 0;
@@ -60,13 +60,13 @@ $input-height: 30px;
   margin-top: 5px;
 }
 
-.loginButton {
+.login-button {
 
   @extend %login-button-white;
   margin-top: 10px;
 }
 
-.signupButton {
+.signup-button {
 
   @extend %login-button-green;
   margin: 10px 0;

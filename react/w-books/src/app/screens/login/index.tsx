@@ -36,8 +36,8 @@ function Login() {
   const onSubmit = handleSubmitForm;
 
   return (
-    <form className={stylesLogin.loginContainer} onSubmit={handleSubmit(onSubmit)}>
-      <img className={stylesLogin.mainLogo} src={woloxLogo} />
+    <form className={stylesLogin['login-container']} onSubmit={handleSubmit(onSubmit)}>
+      <img className={stylesLogin['main-logo']} src={woloxLogo} />
       <label className={stylesLogin.label}>Nombre</label>
       <input name="firstName" className={stylesLogin.input} ref={register} />
       <label className={stylesLogin.label}>Apellido</label>
@@ -48,11 +48,11 @@ function Login() {
       <input name="password" className={stylesLogin.input} type="password" ref={register} />
       <label className={stylesLogin.label}>Confirmación de Password</label>
       <input name="passwordConfirmation" className={stylesLogin.input} type="password" ref={register} />
-      <button className={stylesLogin.signupButton} type="button">
+      <button className={stylesLogin['signup-button']} type="button">
         Sign Up
       </button>
       <hr />
-      <button className={stylesLogin.loginButton} type="submit">
+      <button className={stylesLogin['login-button']} type="submit">
         Login
       </button>
     </form>
