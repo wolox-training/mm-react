@@ -1,0 +1,73 @@
+
+@import '../../../scss/colors';
+
+$border-radius: 5px;
+$input-height: 30px;
+
+%button-base {
+  border: 3px solid $secondary-color;
+  border-radius: $border-radius;
+  height: $input-height;
+}
+
+%login-button-green {
+
+  @extend %button-base;
+  color: #FFF;
+  background-color: $secondary-color;
+
+  &:hover {
+    background-color: #FFF;
+    color: $secondary-color;
+  }
+}
+
+%login-button-white {
+
+  @extend %button-base;
+  color: $secondary-color;
+
+  &:hover {
+    color: #FFF;
+    background-color: $secondary-color;
+  }
+}
+
+.loginContainer {
+  background-color: #F5F5F5;
+  padding: 20px;
+  width: 300px;
+  border-top: 5px solid $primary-color;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.mainLogo {
+  width: 80%;
+  align-self: center;
+  margin: 10px 0;
+}
+
+.label {
+  color: #121212;
+  margin-top: 10px;
+}
+
+.input {
+  border-radius: $border-radius;
+  height: $input-height;
+  margin-top: 5px;
+}
+
+.loginButton {
+
+  @extend %login-button-white;
+  margin-top: 10px;
+}
+
+.signupButton {
+
+  @extend %login-button-green;
+  margin: 10px 0;
+}
