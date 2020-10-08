@@ -1,25 +1,11 @@
 
-@import '../../../scss/colors';
-
-$border-radius: 5px;
-$input-height: 30px;
+@import 'src/scss/colors';
+@import 'src/scss/sizes';
 
 %button-base {
   border: 3px solid $secondary-color;
   border-radius: $border-radius;
-  height: $input-height;
-}
-
-%login-button-green {
-
-  @extend %button-base;
-  color: #FFF;
-  background-color: $secondary-color;
-
-  &:hover {
-    background-color: #FFF;
-    color: $secondary-color;
-  }
+  height: $inputs-height;
 }
 
 %login-button-white {
@@ -28,19 +14,29 @@ $input-height: 30px;
   color: $secondary-color;
 
   &:hover {
-    color: #FFF;
+    color: $white;
     background-color: $secondary-color;
   }
 }
 
+%login-button-green {
+
+  @extend %button-base;
+  color: $white;
+  background-color: $secondary-color;
+
+  &:hover {
+    background-color: $white;
+    color: $secondary-color;
+  }
+}
+
 .login-container {
-  background-color: #F5F5F5;
+  background-color: $light-grey;
   padding: 20px;
   width: 300px;
   border-top: 5px solid $primary-color;
   margin: 20px auto;
-  display: flex;
-  flex-direction: column;
 }
 
 .main-logo {
@@ -50,20 +46,23 @@ $input-height: 30px;
 }
 
 .label {
-  color: #121212;
-  margin-top: 10px;
+  color: $black;
+  margin-bottom: 10px;
 }
 
 .input {
   border-radius: $border-radius;
-  height: $input-height;
-  margin-top: 5px;
+  height: $inputs-height;
+  margin-bottom: 5px;
 }
 
 .login-button {
 
   @extend %login-button-white;
-  margin-top: 10px;
+}
+
+.separator {
+  margin-bottom: 10px;
 }
 
 .signup-button {

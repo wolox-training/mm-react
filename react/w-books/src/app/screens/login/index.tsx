@@ -1,22 +1,22 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 
-import woloxLogo from '../../assets/wolox.png';
+import woloxLogo from 'app/assets/wolox.png';
 
-import stylesLogin from './styles.module.scss';
+import styles from './styles.module.scss';
 
-type InputsForm = {
+interface InputsForm {
   firstName: string;
   lastName: string;
   email: string;
   password: string;
   passwordConfirmation: string;
-};
+}
 
 function Login() {
   const { register, handleSubmit } = useForm<InputsForm>();
 
-  function handleSubmitForm(data: any) {
+  const onSubmit = (data: InputsForm) => {
     const result = {
       user: {
         email: data.email,
@@ -31,28 +31,26 @@ function Login() {
       }
     };
     console.log(result);
-  }
-
-  const onSubmit = handleSubmitForm;
+  };
 
   return (
-    <form className={stylesLogin['login-container']} onSubmit={handleSubmit(onSubmit)}>
-      <img className={stylesLogin['main-logo']} src={woloxLogo} />
-      <label className={stylesLogin.label}>Nombre</label>
-      <input name="firstName" className={stylesLogin.input} ref={register} />
-      <label className={stylesLogin.label}>Apellido</label>
-      <input name="lastName" className={stylesLogin.input} ref={register} />
-      <label className={stylesLogin.label}>Email</label>
-      <input name="email" className={stylesLogin.input} type="email" ref={register} />
-      <label className={stylesLogin.label}>Password</label>
-      <input name="password" className={stylesLogin.input} type="password" ref={register} />
-      <label className={stylesLogin.label}>Confirmación de Password</label>
-      <input name="passwordConfirmation" className={stylesLogin.input} type="password" ref={register} />
-      <button className={stylesLogin['signup-button']} type="submit">
+    <form className={`column ${styles.loginContainer}`} onSubmit={handleSubmit(onSubmit)}>
+      <img className={styles.mainLogo} src={woloxLogo} />
+      <label className={styles.label}>Nombre</label>
+      <input name="firstName" className={styles.input} ref={register} />
+      <label className={styles.label}>Apellido</label>
+      <input name="lastName" className={styles.input} ref={register} />
+      <label className={styles.label}>Email</label>
+      <input name="email" className={styles.input} type="email" ref={register} />
+      <label className={styles.label}>Password</label>
+      <input name="password" className={styles.input} type="password" ref={register} />
+      <label className={styles.label}>Confirmación de Password</label>
+      <input name="passwordConfirmation" className={styles.input} type="password" ref={register} />
+      <button className={styles.signupButton} type="submit">
         Sign Up
       </button>
-      <hr />
-      <button className={stylesLogin['login-button']} type="button">
+      <hr className={styles.separator} />
+      <button className={styles.loginButton} type="button">
         Login
       </button>
     </form>
