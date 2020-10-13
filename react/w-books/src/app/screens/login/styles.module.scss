@@ -14,16 +14,16 @@
   color: $secondary-color;
 
   &:hover {
-    color: $white;
     background-color: $secondary-color;
+    color: $white;
   }
 }
 
 %login-button-green {
 
   @extend %button-base;
-  color: $white;
   background-color: $secondary-color;
+  color: $white;
 
   &:hover {
     background-color: $white;
@@ -32,17 +32,17 @@
 }
 
 .login-container {
-  background-color: $light-grey;
-  padding: 20px;
-  width: 300px;
+  background-color: $light-gray;
   border-top: 5px solid $primary-color;
   margin: 20px auto;
+  padding: 20px;
+  width: 300px;
 }
 
 .main-logo {
-  width: 80%;
   align-self: center;
   margin: 10px 0;
+  width: 80%;
 }
 
 .label {

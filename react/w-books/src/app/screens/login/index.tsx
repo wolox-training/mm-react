@@ -57,7 +57,7 @@ function Login() {
         Sign Up
       </button>
       <hr className={styles.separator} />
-      <button className={styles.loginButton} type="button">
+      <button className={styles.loginButton} type="submit">
         Login
       </button>
     </form>
